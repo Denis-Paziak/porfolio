@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addition/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="wrapper" id="swup">
+        <header class="header">
+            <div class="container">
+                <a href="/" class="logo">
+                    <div class="text-split">
+                        <p class="text-split__width-text">Denis Paziak</p>
+                        <p class="text-split__mask text-split__mask_top"><span>Denis Paziak</span></p>
+                        <p class="text-split__mask text-split__mask_bottom"><span>Denis Paziak</span></p>
+                    </div>
+                </a>
+                <div class="menu">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </header>
+        <div class="section transition-fade">
+            <div class="work-container">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="work-box">
+                                2
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="work-box">
+                                2
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="work-box">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="container">
+                <div class="nav-list">
+                    <a href="/">
+                        <div class="text-split">
+                            <p class="text-split__width-text">HOME</p>
+                            <p class="text-split__mask text-split__mask_top"><span>HOME</span></p>
+                            <p class="text-split__mask text-split__mask_bottom"><span>HOME</span></p>
+                        </div>
+                    </a>
+                    <a href="/work.html">
+                        <div class="text-split">
+                            <p class="text-split__width-text">WORK</p>
+                            <p class="text-split__mask text-split__mask_top"><span>WORK</span></p>
+                            <p class="text-split__mask text-split__mask_bottom"><span>WORK</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="addition/swiper/swiper-bundle.min.js"></script>
+    <script src="addition/swup/swup.min.js"></script>
+    <script>
+        function init() {
+            if (document.querySelector('#scene')) {
+                var scene = document.getElementById('scene');
+                var parallaxInstance = new Parallax(scene);
+            }
+
+            if (document.querySelector('.swiper')) {
+                var swiper = new Swiper(".swiper", {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 100,
+                });
+            }
+        }
+        const swup = new Swup();
+        init();
+        swup.on('contentReplaced', init);
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
